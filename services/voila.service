@@ -1,0 +1,17 @@
+[Unit]
+Description=Voila
+
+[Service]
+Type=Simple
+PIDFile=/run/voila.pid
+BASE_DIR=/where/venv/and/git/repo/are
+VIRTUAL_ENV=/home/wurmfood/planck/.venv
+Environment=PATH=$VIRTUAL_ENV/bin:$PATH
+ExecStart=/bin/sh -c 'cd $BASE_DIR/planckslaw && python -m voila --no-browser $BASE_DIR/planckslaw/index.ipynb'
+User=<user you're running this as>
+WorkingDirectory=$BASE_DIR/planckslaw/
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
