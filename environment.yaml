@@ -1,0 +1,11 @@
+name: planks-law
+channels:
+  - conda-forge
+dependencies:
+  - matplotlib
+  - numpy
+  - pandas
+  - scipy
+  - ipywidgets
+  - jupyterlab>=3.1
+  - voila>=0.2.11
