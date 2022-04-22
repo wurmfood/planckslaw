@@ -4,12 +4,9 @@ Description=Voila
 [Service]
 Type=Simple
 PIDFile=/run/voila.pid
-BASE_DIR=/where/venv/and/git/repo/are
-VIRTUAL_ENV=$BASE_DIR/.venv
-Environment=PATH=$VIRTUAL_ENV/bin:$PATH
-ExecStart=/bin/sh -c 'cd $BASE_DIR/planckslaw && python -m voila --no-browser $BASE_DIR/planckslaw/index.ipynb'
-User=<user you're running this as>
-WorkingDirectory=$BASE_DIR/planckslaw/
+ExecStart=/link/to/voila.sh
+User=someUser
+WorkingDirectory=<repository location>
 Restart=always
 RestartSec=10
 
