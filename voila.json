@@ -1,0 +1,12 @@
+{
+    "VoilaConfiguration": {
+        "Preheat_kernel": true
+    },
+    "VoilaKernelManager": {
+        "kernel_pools_config": {
+            "index.ipynb": {
+                "pool_size": 5
+            }
+        }
+    }
+}
